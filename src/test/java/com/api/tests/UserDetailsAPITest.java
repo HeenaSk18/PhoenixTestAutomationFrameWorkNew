@@ -9,6 +9,7 @@ import io.restassured.http.ContentType;
 import io.restassured.http.Header;
 import io.restassured.module.jsv.JsonSchemaValidator;
 
+
 public class UserDetailsAPITest {
 	@Test
 	public void userDetailsAPITest() {
