@@ -22,20 +22,18 @@ public class ConfigManager {
 		env=env.toLowerCase().trim();
 		System.out.println("Running Test in Env "+env);
 		switch(env) {
-		case "dev":{
-			path = "config/config.dev.properties";
-			break;
-		}
-		case "qa":{
-			path = "config/config.qa.properties";
-			break;
-		}
-		case "uat":{
-			path = "config/config.uat.properties";
-			break;
-		}
-		default:
-			path="config/config.qa.properties";
+//		case "dev":{
+//			path = "config/config.dev.properties";
+//			break;
+//		}
+		case "dev"-> path = "config/config.dev.properties";
+		
+		case "qa"-> path = "config/config.qa.properties";
+		
+		case "uat"-> path = "config/config.uat.properties";
+		
+		default->path="config/config.qa.properties";
+		
 		}
 		
 	InputStream input	= Thread.currentThread().getContextClassLoader().getResourceAsStream(path);

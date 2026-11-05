@@ -20,3 +20,5 @@ whenever we want to access an arguement that we passing from terminal in your AT
 
 System.getProperty ("propertyName");
 mvn test -DpropertyName=ABC value
+
+jre for arrow opertor -- 14 java
