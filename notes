@@ -1,0 +1,11 @@
+properties --- value will be string format
+utility file -- read file
+config manager cls -- loading property file into the memory
+helpt to retrieve the value of the corresponding key
+utitlty cld --- lot of static methods
+should not create object of utility classes
+special cls present in java that helps you work on properties --- in built
+
+file-spearator-- / mac \ window
+
+getContextClassLoader() -- where is avaible is project
