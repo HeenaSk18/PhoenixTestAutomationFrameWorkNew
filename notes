@@ -9,3 +9,14 @@ special cls present in java that helps you work on properties --- in built
 file-spearator-- / mac \ window
 
 getContextClassLoader() -- where is avaible is project
+
+variable remain same of properities
+
+run the test automationframework from cli -- integrated any tool git action etc..
+
+multi env configuration --- mvn test -Denv=QA (-D is agrument --- env = property load the respected property file )
+
+whenever we want to access an arguement that we passing from terminal in your ATF code you need to use 
+
+System.getProperty ("propertyName");
+mvn test -DpropertyName=ABC value

@@ -24,6 +24,8 @@ public class LoginAPITest {
 //		ConfigManager configManager= new ConfigManager(); -- for access bbut not to create object -- restriction 
 		UserCredentials userCredentials = new UserCredentials("iamfd", "password");//POJO object
 		
+//		Read the property value that is going to be passed from terminal
+		System.out.println("------------------->>>>> "+System.getProperty("env"));
 		
 		given() //RequestSpeficiation
 			

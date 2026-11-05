@@ -10,11 +10,34 @@ public class ConfigManager {
 	
 	private static Properties prop = new Properties(); 
 	private static String path ="config/config.properties";
+	private static String env;
 	private ConfigManager() {
 //		private constructor
 	}
 	
 	static {
+//		env=System.getProperty("env");
+		env=System.getProperty("env","qa");
+
+		env=env.toLowerCase().trim();
+		System.out.println("Running Test in Env "+env);
+		switch(env) {
+		case "dev":{
+			path = "config/config.dev.properties";
+			break;
+		}
+		case "qa":{
+			path = "config/config.qa.properties";
+			break;
+		}
+		case "uat":{
+			path = "config/config.uat.properties";
+			break;
+		}
+		default:
+			path="config/config.qa.properties";
+		}
+		
 	InputStream input	= Thread.currentThread().getContextClassLoader().getResourceAsStream(path);
 	if(input ==null) {
 		throw new RuntimeException("Cannot Find the File at the path "+path);
