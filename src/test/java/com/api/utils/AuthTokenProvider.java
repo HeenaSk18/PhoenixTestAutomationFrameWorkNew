@@ -1,11 +1,11 @@
 package com.api.utils;
 
+import static com.api.constant.Role.ENG;
+import static com.api.constant.Role.FD;
+import static com.api.constant.Role.QC;
+import static com.api.constant.Role.SUP;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
-
-import java.io.IOException;
-
-import static com.api.constant.Role.*;
 
 import com.api.constant.Role;
 import com.api.pojo.UserCredentials;
@@ -17,7 +17,7 @@ public class AuthTokenProvider {
 	private AuthTokenProvider() {
 		
 	}
-	public static String getToken(Role roles) throws IOException {
+	public static String getToken(Role roles) {
 
 //	public static String getToken(String roles) throws IOException {
 //		want to make the request for the login api and we to extract the token and 
@@ -32,6 +32,7 @@ public class AuthTokenProvider {
 			userCredentials = new UserCredentials("iamsup", "password");
 		}
 		else if(roles==ENG) {
+			
 			userCredentials = new UserCredentials("iameng", "password");
 		}
 		else if(roles==QC) {

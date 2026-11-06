@@ -1,15 +1,13 @@
 package com.api.tests;
 
+import static com.api.utils.ConfigManager.getProperty;
 import static io.restassured.RestAssured.given;
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.lessThan;
 
-import java.io.IOException;
-
 import org.testng.annotations.Test;
 
 import com.api.pojo.UserCredentials;
-import static com.api.utils.ConfigManager.*;
 
 import io.restassured.http.ContentType;
 import io.restassured.module.jsv.JsonSchemaValidator;
@@ -19,7 +17,7 @@ public class LoginAPITest {
 		
 	
 	@Test
-	public void loginAPITest() throws IOException {
+	public void loginAPITest(){
 //		Rest Assured Code --- RA is Utlity cls
 //		ConfigManager configManager= new ConfigManager(); -- for access bbut not to create object -- restriction 
 		UserCredentials userCredentials = new UserCredentials("iamfd", "password");//POJO object
