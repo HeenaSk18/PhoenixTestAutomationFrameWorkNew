@@ -26,3 +26,7 @@ jre for arrow opertor -- 14 java
 get the auth token --- loginAPIRequest
 
 post() implicity added contetnttyoe
+
+mvn clean test -DsuiteXmlFile=testng.xml -Denv=qa  --- count test --- first -- maven surefire plugin -- implicity works
+
+so explicity ---
