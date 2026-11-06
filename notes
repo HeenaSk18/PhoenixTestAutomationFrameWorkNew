@@ -24,3 +24,5 @@ mvn test -DpropertyName=ABC value
 jre for arrow opertor -- 14 java
 
 get the auth token --- loginAPIRequest
+
+post() implicity added contetnttyoe
